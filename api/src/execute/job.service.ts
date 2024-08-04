@@ -17,6 +17,7 @@ export class JobService {
 
       // Execute the command
       exec(command, (error, stdout, stderr) => {
+        console.log(error, stdout, stderr);
         if (error) {
           return resolve({ ran: false, output: stderr.toString() });
         }
